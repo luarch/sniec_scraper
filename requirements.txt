@@ -1,0 +1,4 @@
+bs4~=0.0.1
+icalendar~=4.0.3
+requests~=2.21.0
+pylint~=2.3.1

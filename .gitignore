@@ -1,0 +1,6 @@
+venv/
+*.pyc
+*.swp
+__pycache__
+.vscode/
+output/
