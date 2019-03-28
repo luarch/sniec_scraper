@@ -1,6 +1,6 @@
 import os
 import os.path
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -59,7 +59,7 @@ def createCalendar(month, lang_cn=False):
             evt = Event()
             evt.add('summary', raw_event['title'])
             evt.add('dtstart', datetime.strptime(raw_event['startDate'], dateFormat))
-            evt.add('dtend', datetime.strptime(raw_event['endDate'], dateFormat))
+            evt.add('dtend', datetime.strptime(raw_event['endDate'], dateFormat) + timedelta(days=1))
             evt.add('location', raw_event['location'])
             cal.add_component(evt)
     return cal
