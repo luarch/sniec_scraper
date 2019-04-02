@@ -1,13 +1,13 @@
 import argparse
 
-from sniec_scrapper.scrapper import createIcsFile
+from sniec_scraper.scraper import createIcsFile
 import os.path
 
 def main():
-    parser = argparse.ArgumentParser(prog="sniec_scrapper", description="Scrap SNIEC website and generate ICS calendar file for exhibition events.")
+    parser = argparse.ArgumentParser(prog="sniec_scraper", description="Scrape SNIEC website and generate ICS calendar file for exhibition events.")
 
     parser.add_argument('month',
-    help="month which you want to scrap events in, eg. 2019-03")
+    help="month which you want to scrape events in, eg. 2019-03")
     parser.add_argument('-c', '--cn',
     help="flag indicates whether you want to have a Chinese version output",
     action='store_true')

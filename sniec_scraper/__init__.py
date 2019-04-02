@@ -1,0 +1,1 @@
+from sniec_scraper.cli import main
