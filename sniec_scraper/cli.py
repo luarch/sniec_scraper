@@ -15,9 +15,7 @@ def main():
 
     args = parser.parse_args()
 
-    lang = 'en'
-    if args.cn:
-        lang = 'cn'
+    lang = 'en' if not args.cn else 'cn'
     filename = 'sniec-calendar-{}-{}.ics'.format(args.month, lang)
     filename = os.path.join(args.output_dir, filename)
     print("Saving to {}".format(filename))
